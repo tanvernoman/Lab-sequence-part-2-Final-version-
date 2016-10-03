@@ -15,31 +15,45 @@ public class Lab_Sequence_Part2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        Sequence<Integer> s= new LinkedSequence<>();
-        
+
+        test();
+    }
+
+    private static void test() {
+       Sequence<Integer> s = new LinkedSequence<>();
+
         s.append(10);
         s.append(20);
         s.append(30);
         s.append(40);
         s.append(50);
         s.display();
-        System.out.println("Array size is "+s.size());
-        
+        System.out.println("list size is " + s.size());
+
         System.out.println(s.get(3));
-       
-        //s.set(3, 500);
-        
-        
+
+        s.set(3, 500);
+        System.out.println("----------------After set-------------");
         s.display();
-//        
-//        Sequence<String> s1= new LinkedSequence<>();
-//        s1.append("tanver");
-//        s1.append("Hasan");
-//        
-//        s1.display();
+
+        s.remove(4);
+        System.out.println("-----------After remove---------");
+        s.display();
+        System.out.println("list size is " + s.size());
+
+        s.add(2, 2000);
+        System.out.println("------After add---------");
+        s.display();
+        System.out.println("list size is " + s.size());
         
-     
+        
+        s.add(3, 3000);
+        System.out.println("------After add---------");
+        s.display();
+        System.out.println("list size is " + s.size());
+        
+        System.out.println(s.contains(20));
+         System.out.println(s.contains(2000000000));
     }
-    
+
 }
